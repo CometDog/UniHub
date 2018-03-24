@@ -1,4 +1,5 @@
-﻿using UniHub.Navigators.Login;
+﻿using System;
+using UniHub.Navigators.Login;
 using UniHub.Presenter;
 using UniHub.Resources.Strings;
 using Xamarin.Forms;
@@ -7,12 +8,12 @@ using Xamarin.Forms.Xaml;
 namespace UniHub.Views.Login
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginView : ContentPage
+    partial class LoginView : ContentPage
     {
         private readonly LoginPresenter _presenter;
         private readonly LoginNavigator _navigator;
 
-        public LoginView()
+        internal LoginView()
         {
             _presenter = new LoginPresenter(this);
             _navigator = new LoginNavigator();
@@ -25,6 +26,11 @@ namespace UniHub.Views.Login
             {
                 _presenter.HandleOAuth(args);
             });
+        }
+
+        internal void OAuthAccepted()
+        {
+            _navigator.ShowMainView();
         }
 
         private void SetText()

@@ -1,4 +1,5 @@
-﻿using UniHub.Views.Login;
+﻿using Octokit;
+using UniHub.Views.Login;
 
 namespace UniHub.Presenter
 {
@@ -6,14 +7,22 @@ namespace UniHub.Presenter
     {
         private readonly LoginView _view;
 
-        public LoginPresenter(LoginView view)
+        internal LoginPresenter(LoginView view)
         {
             _view = view;
         }
 
-        public void HandleOAuth(string oAuthUrl)
+        internal async void HandleOAuth(string oAuthUrl)
         {
+            var code = oAuthUrl.Replace("unihub://login?code=", "");
+            var request = new OauthTokenRequest(Secret.clientId, Secret.clientSecret, code);
 
+            var token = await SessionManager.Client.Oauth.CreateAccessToken(request);
+            SessionManager.AccessToken = token.AccessToken;
+
+            SessionManager.Client.Credentials = new Credentials(SessionManager.AccessToken as string);
+
+            _view.OAuthAccepted();
         }
     }
 }
