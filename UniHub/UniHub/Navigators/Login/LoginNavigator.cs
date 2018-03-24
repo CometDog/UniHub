@@ -13,7 +13,6 @@ namespace UniHub.Navigators.Login
 
         internal void ShowOAuthLogin()
         {
-            SessionManager.Client = new GitHubClient(new ProductHeaderValue("UniHub"));
             var request = new OauthLoginRequest(Secret.clientId)
             {
                 Scopes = { "user", "notifications" }

@@ -1,24 +1,25 @@
-﻿using UniHub.Views.Login;
+﻿using Octokit;
+using UniHub.Views.Login;
 using UniHub.Views.Main;
-using Xamarin.Forms;
 
 namespace UniHub
 {
-    partial class App : Application
+    partial class App : Xamarin.Forms.Application
     {
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Page();
+            MainPage = new Xamarin.Forms.Page();
         }
 
         protected override void OnStart()
         {
             base.OnStart();
+            CreateClient();
             if (SessionManager.AccessToken != null)
             {
-                if (SessionManager.Client.Credentials == null)
+                if (SessionManager.Client == null)
                 {
                     SessionManager.Client.Credentials = new Octokit.Credentials(SessionManager.AccessToken as string);
                 }
@@ -28,6 +29,11 @@ namespace UniHub
             {
                 MainPage = new LoginView();
             }
+        }
+
+        internal void CreateClient()
+        {
+            SessionManager.Client = new GitHubClient(new ProductHeaderValue("UniHub"));
         }
     }
 }
