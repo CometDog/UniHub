@@ -1,5 +1,4 @@
-﻿using System;
-using UniHub.Navigators.Login;
+﻿using UniHub.Navigators.Login;
 using UniHub.Presenter;
 using UniHub.Resources.Strings;
 using Xamarin.Forms;
@@ -37,7 +36,7 @@ namespace UniHub.Views.Login
         {
             LoginPromptLabel.Text = StringResources.LoginPrompt;
             LoginTypePromptLabel.Text = StringResources.LoginTypePrompt;
-            LoginTypeOAuthLabel.Text = StringResources.LoginTypeOAuth;
+            LoginTypeOAuthButton.Text = StringResources.LoginTypeOAuth;
         }
 
         private void OAuthButtonPressed(object sender, ClickedEventArgs args)

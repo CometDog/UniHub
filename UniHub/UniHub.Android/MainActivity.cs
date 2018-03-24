@@ -6,9 +6,6 @@ using Xamarin.Forms;
 namespace UniHub.Droid
 {
     [Activity(Label = "UniHub", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-<<<<<<< HEAD
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-=======
     [IntentFilter(
         new[] { Android.Content.Intent.ActionView },
         Categories = new[] { Android.Content.Intent.CategoryDefault, Android.Content.Intent.CategoryBrowsable },
@@ -16,7 +13,6 @@ namespace UniHub.Droid
         DataHost = "login"
     )]
     class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
->>>>>>> Better handled method and class access
     {
         protected override void OnCreate(Bundle bundle)
         {

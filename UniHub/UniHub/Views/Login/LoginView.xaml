@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UniHub.Views.Login.LoginView"
+             BackgroundColor="#303F9F">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     Margin="24"
+                     MinimumHeightRequest="350"
+                     MinimumWidthRequest="250"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Vertical"
+                             Padding="16"
+                             BackgroundColor="#2196F3">
+                    <Label x:Name="LoginPromptLabel"
+                           HorizontalOptions="Center"
+                           TextColor="White"/>
+                    <Label x:Name="LoginTypePromptLabel"
+                           HorizontalOptions="Center"
+                           TextColor="#82B1FF"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Padding="16"
+                             BackgroundColor="White">
+                    <Button x:Name="LoginTypeOAuthButton"
+                            BackgroundColor="Transparent"
+                            TextColor="#388E3C"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="OAuthButtonPressed"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
