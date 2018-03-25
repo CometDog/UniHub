@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>UniHub</value>
+    <comment>App</comment>
+  </data>
+  <data name="HomeTabFeeds" xml:space="preserve">
+    <value>Feeds</value>
+    <comment>Home</comment>
+  </data>
+  <data name="HomeTabIssues" xml:space="preserve">
+    <value>Issues</value>
+    <comment>Home</comment>
+  </data>
+  <data name="HomeTabPullRequests" xml:space="preserve">
+    <value>Pull Requests</value>
+    <comment>Home</comment>
+  </data>
   <data name="LoginPrompt" xml:space="preserve">
     <value>Sign in using your GitHub account to use UniHub</value>
     <comment>Login</comment>

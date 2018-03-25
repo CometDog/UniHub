@@ -1,5 +1,5 @@
 ﻿using System;
-
+using UniHub.Resources.Strings;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,6 +12,7 @@ namespace UniHub.Views.Main
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            MasterPage.Title = StringResources.AppName;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

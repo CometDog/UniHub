@@ -1,7 +1,7 @@
 ﻿using Octokit;
 using UniHub.Views.Login;
 
-namespace UniHub.Presenter
+namespace UniHub.Presenter.Login
 {
     class LoginPresenter
     {

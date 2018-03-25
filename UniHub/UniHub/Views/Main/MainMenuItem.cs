@@ -1,8 +1,8 @@
 ﻿using System;
+using UniHub.Views.Main.Home;
 
 namespace UniHub.Views.Main
 {
-
     class MainMenuItem
     {
         internal MainMenuItem()
