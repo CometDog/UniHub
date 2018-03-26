@@ -1,8 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:UniHub.Resources"
+             xmlns:strings="clr-namespace:UniHub.Resources.Strings"
              x:Class="UniHub.Views.Login.LoginView"
-             BackgroundColor="#303F9F">
+             BackgroundColor="{x:Static resources:Colors.Indigo_500}">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                      Margin="24"
@@ -12,23 +15,32 @@
                      VerticalOptions="Center">
             <StackLayout Orientation="Vertical">
                 <StackLayout Orientation="Vertical"
-                             Padding="16"
-                             BackgroundColor="#2196F3">
+                             Padding="16">
                     <Label x:Name="LoginPromptLabel"
+                           Text="{x:Static strings:StringResources.LoginPrompt}"
                            HorizontalOptions="Center"
-                           TextColor="White"/>
+                           TextColor="White"
+                           FontSize="24" />
                     <Label x:Name="LoginTypePromptLabel"
+                           Text="{x:Static strings:StringResources.LoginTypePrompt}"
                            HorizontalOptions="Center"
-                           TextColor="#82B1FF"/>
+                           TextColor="{x:Static resources:Colors.Blue_200}"
+                           FontSize="16" />
                 </StackLayout>
                 <StackLayout Orientation="Vertical"
                              Padding="16"
                              BackgroundColor="White">
                     <Button x:Name="LoginTypeOAuthButton"
+                            Text="{x:Static strings:StringResources.LoginTypeOAuth}"
                             BackgroundColor="Transparent"
-                            TextColor="#388E3C"
+                            TextColor="{x:Static resources:Colors.Cyan_700}"
                             HorizontalOptions="FillAndExpand"
-                            Clicked="OAuthButtonPressed"/>
+                            Clicked="OAuthButtonPressed"
+                            FontSize="20" />
+                    <ActivityIndicator x:Name="LoginActivityIndicator"
+                                       IsRunning="True"
+                                       IsVisible="False"
+                                       HorizontalOptions="Center" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>

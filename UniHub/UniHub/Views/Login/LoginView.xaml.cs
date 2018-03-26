@@ -19,29 +19,40 @@ namespace UniHub.Views.Login
 
             InitializeComponent();
 
-            SetText();
-
             MessagingCenter.Subscribe<string>(this, "OAuthUrl", (args) =>
             {
                 _presenter.HandleOAuth(args);
             });
         }
 
-        internal void OAuthAccepted()
+        internal void OAuthSucceeded()
         {
             _navigator.ShowMainView();
+            ViewLoadingStopped();
         }
 
-        private void SetText()
+        internal async void OAuthFailed()
         {
-            LoginPromptLabel.Text = StringResources.LoginPrompt;
-            LoginTypePromptLabel.Text = StringResources.LoginTypePrompt;
-            LoginTypeOAuthButton.Text = StringResources.LoginTypeOAuth;
+            await DisplayAlert(StringResources.Error, StringResources.UnknownError, StringResources.OK);
+            ViewLoadingStopped();
         }
 
         private void OAuthButtonPressed(object sender, ClickedEventArgs args)
         {
+            ViewLoadingStarted();
             _navigator.ShowOAuthLogin();
+        }
+
+        private void ViewLoadingStarted()
+        {
+            LoginTypeOAuthButton.IsVisible = false;
+            LoginActivityIndicator.IsVisible = true;
+        }
+
+        private void ViewLoadingStopped()
+        {
+            LoginTypeOAuthButton.IsVisible = true;
+            LoginActivityIndicator.IsVisible = false;
         }
     }
 }

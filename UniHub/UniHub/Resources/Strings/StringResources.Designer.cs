@@ -22,7 +22,7 @@ namespace UniHub.Resources.Strings {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class StringResources {
+    public class StringResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace UniHub.Resources.Strings {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UniHub.Resources.Strings.StringResources", typeof(StringResources).Assembly);
@@ -51,7 +51,7 @@ namespace UniHub.Resources.Strings {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,25 +63,25 @@ namespace UniHub.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to UniHub.
         /// </summary>
-        internal static string AppName {
+        public static string AppName {
             get {
                 return ResourceManager.GetString("AppName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feeds.
+        ///   Looks up a localized string similar to Error.
         /// </summary>
-        internal static string HomeTabFeeds {
+        public static string Error {
             get {
-                return ResourceManager.GetString("HomeTabFeeds", resourceCulture);
+                return ResourceManager.GetString("Error", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Issues.
         /// </summary>
-        internal static string HomeTabIssues {
+        public static string HomeTabIssues {
             get {
                 return ResourceManager.GetString("HomeTabIssues", resourceCulture);
             }
@@ -90,16 +90,16 @@ namespace UniHub.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Pull Requests.
         /// </summary>
-        internal static string HomeTabPullRequests {
+        public static string HomeTabPullRequests {
             get {
                 return ResourceManager.GetString("HomeTabPullRequests", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sign in using your GitHub account to use UniHub.
+        ///   Looks up a localized string similar to Sign in using your GitHub account.
         /// </summary>
-        internal static string LoginPrompt {
+        public static string LoginPrompt {
             get {
                 return ResourceManager.GetString("LoginPrompt", resourceCulture);
             }
@@ -108,18 +108,36 @@ namespace UniHub.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to OAuth.
         /// </summary>
-        internal static string LoginTypeOAuth {
+        public static string LoginTypeOAuth {
             get {
                 return ResourceManager.GetString("LoginTypeOAuth", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose your login type.
+        ///   Looks up a localized string similar to Currently only OAuth is support.
         /// </summary>
-        internal static string LoginTypePrompt {
+        public static string LoginTypePrompt {
             get {
                 return ResourceManager.GetString("LoginTypePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something went wrong. Please try again..
+        /// </summary>
+        public static string UnknownError {
+            get {
+                return ResourceManager.GetString("UnknownError", resourceCulture);
             }
         }
     }

@@ -4,9 +4,6 @@
             xmlns:pages="clr-namespace:UniHub.Views.Main.Home"
             x:Class="UniHub.Views.Main.Home.HomeView">
     <!--Pages can be added as references or inline-->
-    <ContentPage x:Name="FeedsTab">
-        <pages:FeedsView/>
-    </ContentPage>
     <ContentPage x:Name="IssuesTab" />
     <ContentPage x:Name="PullRequestsTab" />
 </TabbedPage>

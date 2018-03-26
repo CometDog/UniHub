@@ -16,7 +16,6 @@ namespace UniHub.Views.Main.Home
 
         private void SetText()
         {
-            FeedsTab.Title = StringResources.HomeTabFeeds;
             IssuesTab.Title = StringResources.HomeTabIssues;
             PullRequestsTab.Title = StringResources.HomeTabPullRequests;
         }
