@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:strings="clr-namespace:UniHub.Resources.Strings"
+            x:Class="UniHub.Views.Main.Home.IssuesView">
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Tab 1">
+        <ContentPage.Content>
+            <ListView x:Name="CreatedListView"
+                      IsVisible="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding Title}" />
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentPage.Content>
+        <StackLayout x:Name="NoIssuesLayout"
+                     Orientation="Vertical"
+                     IsVisible="False"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label HorizontalTextAlignment="Center"
+                           Text="{x:Static strings:StringResources.IssuesNone}"
+                           FontSize="20" />
+            <Button x:Name="ReloadButton"
+                    Text="{x:Static strings:StringResources.Reload}"
+                    HorizontalOptions="Center"
+                    FontSize="16"
+                    BackgroundColor="Transparent"
+                    Clicked="ReloadButtonPressed" />
+            <ActivityIndicator x:Name="ReloadActivityIndicator"
+                               IsRunning="True"
+                               IsVisible="False" />
+        </StackLayout>
+        <ActivityIndicator x:Name="CreatedActivityIndicator"
+                           IsRunning="True"
+                           IsVisible="True"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+    </ContentPage>
+    <ContentPage Title="Tab 2" />
+    <ContentPage Title="Tab 3" />
+</TabbedPage>

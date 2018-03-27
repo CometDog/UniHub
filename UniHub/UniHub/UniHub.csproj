@@ -34,7 +34,7 @@
     <EmbeddedResource Update="Views\Login\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Main\Home\HomeView.xaml">
+    <EmbeddedResource Update="Views\Main\Home\IssuesView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Main\Main.xaml">
@@ -43,9 +43,5 @@
     <EmbeddedResource Update="Views\Main\MainMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Presenter\Main\Home\" />
   </ItemGroup>
 </Project>

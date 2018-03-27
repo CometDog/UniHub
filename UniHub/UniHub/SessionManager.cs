@@ -2,7 +2,7 @@
 
 namespace UniHub
 {
-    class SessionManager
+    internal class SessionManager
     {
         private static readonly string ACCESS_TOKEN = "ACCESS_TOKEN";
 

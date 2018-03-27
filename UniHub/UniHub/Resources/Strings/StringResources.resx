@@ -125,13 +125,9 @@
     <value>Error</value>
     <comment>General</comment>
   </data>
-  <data name="HomeTabIssues" xml:space="preserve">
-    <value>Issues</value>
-    <comment>Home</comment>
-  </data>
-  <data name="HomeTabPullRequests" xml:space="preserve">
-    <value>Pull Requests</value>
-    <comment>Home</comment>
+  <data name="IssuesNone" xml:space="preserve">
+    <value>No Issues Found</value>
+    <comment>Issues</comment>
   </data>
   <data name="LoginPrompt" xml:space="preserve">
     <value>Sign in using your GitHub account</value>
@@ -147,6 +143,10 @@
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
+    <comment>General</comment>
+  </data>
+  <data name="Reload" xml:space="preserve">
+    <value>Reload</value>
     <comment>General</comment>
   </data>
   <data name="UnknownError" xml:space="preserve">

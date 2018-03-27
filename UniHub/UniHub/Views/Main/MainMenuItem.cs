@@ -3,12 +3,13 @@ using UniHub.Views.Main.Home;
 
 namespace UniHub.Views.Main
 {
-    class MainMenuItem
+    internal class MainMenuItem
     {
         internal MainMenuItem()
         {
-            TargetType = typeof(HomeView);
+            TargetType = typeof(IssuesView);
         }
+
         internal int Id { get; set; }
         internal string Title { get; set; }
 

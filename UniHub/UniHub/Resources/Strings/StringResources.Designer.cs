@@ -79,20 +79,11 @@ namespace UniHub.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Issues.
+        ///   Looks up a localized string similar to No Issues Found.
         /// </summary>
-        public static string HomeTabIssues {
+        public static string IssuesNone {
             get {
-                return ResourceManager.GetString("HomeTabIssues", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pull Requests.
-        /// </summary>
-        public static string HomeTabPullRequests {
-            get {
-                return ResourceManager.GetString("HomeTabPullRequests", resourceCulture);
+                return ResourceManager.GetString("IssuesNone", resourceCulture);
             }
         }
         
@@ -129,6 +120,15 @@ namespace UniHub.Resources.Strings {
         public static string OK {
             get {
                 return ResourceManager.GetString("OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reload.
+        /// </summary>
+        public static string Reload {
+            get {
+                return ResourceManager.GetString("Reload", resourceCulture);
             }
         }
         
